@@ -49,7 +49,7 @@ Asena.addCommand({pattern: 'tagall ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC 
         await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
     }
     else if (message.reply_message && match[1] == '') {
-        grup = await message.client.groupMetadata(let id = match[1];);
+        grup = await message.client.groupMetadata(id = match[1];);
         var jids = [];
         mesaj = '';
         grup['participants'].map(
