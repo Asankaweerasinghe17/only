@@ -35,7 +35,7 @@ var fs = require('fs');
         .save('lyr.mp3')
         .on('end', async () => {
 
-            var data = { 'api_token': 'c60a989e5dbe5a900c81eaff534074a2', 'file': fs.createReadStream('lyr.mp3'), 'return': 'apple_music,spotify' };
+            var data = { 'api_token': '5fb6efe589810fae711031de2a77c25a', 'file': fs.createReadStream('lyr.mp3'), 'return': 'apple_music,spotify' };
             request ({ uri: 'https://api.audd.io/', form: data, method: "POST" }, async (err, res, body) => {
                 return await message.client.sendMessage(message.jid, body, MessageType.text);
             })
@@ -45,11 +45,10 @@ var fs = require('fs');
 
     Asena.addCommand({pattern: 'reconb ?(.*)', fromMe: true}, (async (message, match) => {
 
-        if (match[1] === '') return await message.sendMessage('https://raw.githubusercontent.com/BotPrivateDrk/WhatsAsenaDuplicated/master/media/gif/AUD-20210613-WA0098.mp3');
-            //return await message.sendMessage(errorMessage(Ierr))
-
-            var data = {
-                'api_token': 'c60a989e5dbe5a900c81eaff534074a2',
+     if (message.reply_message === false) return await message.client.sendMessage(message.jid, bix.UV_REPLY, MessageType.text);
+          
+        var data = {
+                'api_token': '5fb6efe589810fae711031de2a77c25a',
                 'url': `${match[1]}`,
                 'return': 'apple_music,spotify',
             };
