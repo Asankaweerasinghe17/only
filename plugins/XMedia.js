@@ -24,7 +24,7 @@ if (Config.WORKTYPE == 'private') {
     
     Asena.addCommand({on: 'hello', fromMe: false, deleteCommand: false}, (async (message, match) => {
         
-      await message.sendMessage('\n yes pinky here \n')  
+      await message.sendMessage('\n yes pinky here \n');  
     }));
 
     Asena.addCommand({pattern: 'px4mp4', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
